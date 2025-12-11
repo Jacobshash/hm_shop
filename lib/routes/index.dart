@@ -11,8 +11,5 @@ Widget getRootWidget() {
 }
 
 Map<String, WidgetBuilder> getRootRouters() {
-  return {
-    "/": (context) => MainPage(),
-    "/login": (context) => LoginPage(),
-  };
+  return {"/": (context) => MainPage(), "/login": (context) => LoginPage()};
 }
