@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hm_shop/routes/index.dart';
 
 void main() {
-  runApp(const HmShop());
-}
-
-class HmShop extends StatelessWidget {
-  const HmShop({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
+  runApp(getRootWidget());
 }
