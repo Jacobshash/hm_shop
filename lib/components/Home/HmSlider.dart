@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:hm_shop/viewmodels/Home.dart';
+import 'package:hm_shop/viewmodels/home.dart';
 
 class HmSlider extends StatefulWidget {
   final List<BannerImageItem> bannerList;
@@ -21,13 +21,6 @@ class _HmSliderState extends State<HmSlider> {
     return Stack(
       children: [_getBannerItems(), _getSearch(), _getDotsIndicator()],
     );
-
-    // return Container(
-    //   color: Colors.blue,
-    //   height: 300,
-    //   alignment: Alignment.center,
-    //   child: Center(child: Text("轮播图", style: TextStyle(color: Colors.white))),
-    // );
   }
 
   // 在 `_getBannerItems` 方法中优化网络图片处理：
@@ -70,7 +63,7 @@ class _HmSliderState extends State<HmSlider> {
     return CarouselSlider(
       items: List.generate(widget.bannerList.length, (index) {
         return Image.network(
-          widget.bannerList[index].image,
+          widget.bannerList[index].imgUrl,
           width: MediaQuery.of(context).size.width,
           fit: BoxFit.cover,
         );
